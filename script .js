@@ -51,7 +51,6 @@ const questions = [
   }
 ];
 
-// Generate quiz questions
 const quizForm = document.getElementById("quizForm");
 
 questions.forEach((q, index) => {
@@ -64,3 +63,27 @@ questions.forEach((q, index) => {
 
   q.options.forEach(option => {
     const label = document.createElement("label");
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = `q${index}`;
+    input.value = option;
+    label.appendChild(input);
+    label.append(` ${option}`);
+    div.appendChild(label);
+  });
+
+  quizForm.appendChild(div);
+});
+
+document.getElementById("submitBtn").addEventListener("click", () => {
+  let score = 0;
+  questions.forEach((q, index) => {
+    const selected = document.querySelector(`input[name="q${index}"]:checked`);
+    if (selected && selected.value === q.answer) {
+      score++;
+    }
+  });
+
+  const result = document.getElementById("result");
+  result.textContent = `You got ${score} out of ${questions.length} correct.`;
+});
