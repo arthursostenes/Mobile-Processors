@@ -1,50 +1,24 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0d1117;
-  color: #e6edf3;
-}
-
-header {
-  background-color: #1f2937;
-  text-align: center;
-  padding: 40px 20px;
-  color: #60a5fa;
-}
-
-.info {
-  padding: 40px 20px;
-  background-color: #111827;
-}
-
-.info h2 {
-  text-align: center;
-  color: #3b82f6;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card {
-  background-color: #1e293b;
-  padding: 20px;
-  border-left: 5px solid #3b82f6;
-  border-radius: 8px;
-}
-
-.quiz-section {
-  padding: 40px 20px;
   background-color: #0f172a;
+  color: #e0f2fe;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.quiz-section h2 {
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #1e293b;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #1e40af;
+}
+
+h1 {
   text-align: center;
   color: #60a5fa;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .question {
@@ -53,45 +27,38 @@ header {
 
 .question h3 {
   margin-bottom: 10px;
+  color: #93c5fd;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin: 5px 0;
   cursor: pointer;
 }
 
 input[type="radio"] {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 button {
   display: block;
   margin: 20px auto;
-  background-color: #3b82f6;
-  color: white;
-  border: none;
   padding: 12px 24px;
-  border-radius: 6px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #2563eb;
+  background-color: #1d4ed8;
 }
 
 #result {
   text-align: center;
-  font-size: 20px;
   margin-top: 20px;
+  font-size: 20px;
   color: #22c55e;
-}
-
-footer {
-  background-color: #1f2937;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-  color: #9ca3af;
 }
